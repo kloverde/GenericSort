@@ -56,6 +56,7 @@ public class Main {
       final List<Integer> data = getUnorderedList( filename );
       final Statistics stats = algorithm.sortList( data );
       final File dirOutput = new File( DIR_OUTPUT );
+      BufferedWriter writer = null;
 
       if( BubbleSort.class.equals(algorithm.getClass()) ) {
          prefix = "Bubble Sort";
@@ -66,8 +67,6 @@ public class Main {
       }
 
       dirOutput.mkdirs();
-
-      BufferedWriter writer = null;
 
       try {
          writer = new BufferedWriter( new FileWriter(DIR_OUTPUT + prefix + ".txt", false) );
