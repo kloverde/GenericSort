@@ -12,45 +12,45 @@ import org.loverde.sorting.exception.ExceptionMessages;
 
 public class Statistics {
 
-	private Date startDate,
-	             endDate;
+   private Date startDate,
+                endDate;
 
-	private long iterationsPerformed,
-	             swapsPerformed;
+   private long iterationsPerformed,
+                swapsPerformed;
 
 
-	public Date getStartDate() {
-		return startDate;
-	}
+   public Date getStartDate() {
+      return startDate;
+   }
 
-	public void setStartDate( final Date startDate ) {
-		this.startDate = startDate;
-	}
+   public void setStartDate( final Date startDate ) {
+      this.startDate = startDate;
+   }
 
-	public Date getEndDate() {
-		return endDate;
-	}
+   public Date getEndDate() {
+      return endDate;
+   }
 
-	public void setEndDate( final Date endDate ) {
-		this.endDate = endDate;
-	}
+   public void setEndDate( final Date endDate ) {
+      this.endDate = endDate;
+   }
 
-	public long getElapsedTimeMillis() {
-		if( getStartDate() == null ) throw new IllegalStateException( ExceptionMessages.NULL_START_DATE );
-		if( getEndDate() == null) throw new IllegalStateException( ExceptionMessages.NULL_END_DATE );
+   public long getElapsedTimeMillis() {
+      if( getStartDate() == null ) throw new IllegalStateException( ExceptionMessages.NULL_START_DATE );
+      if( getEndDate() == null) throw new IllegalStateException( ExceptionMessages.NULL_END_DATE );
 
-		return endDate.getTime() - startDate.getTime();
-	}
+      return endDate.getTime() - startDate.getTime();
+   }
 
-	public long getSwapsPerformed() {
-		return swapsPerformed;
-	}
+   public long getSwapsPerformed() {
+      return swapsPerformed;
+   }
 
-	public void setSwapsPerformed( final long swapsPerformed ) {
-		this.swapsPerformed = swapsPerformed;
-	}
+   public void setSwapsPerformed( final long swapsPerformed ) {
+      this.swapsPerformed = swapsPerformed;
+   }
 
-  public long getIterationsPerformed() {
+   public long getIterationsPerformed() {
       return iterationsPerformed;
    }
 
