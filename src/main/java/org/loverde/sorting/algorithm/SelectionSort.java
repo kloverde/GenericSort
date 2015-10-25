@@ -75,6 +75,7 @@ public class SelectionSort<T> implements SortingAlgorithm<T> {
 
              swaps++;
           }
+      }
 
       stats.setEndDate( new Date() );
       stats.setIterationsPerformed( iterations );
