@@ -1,0 +1,11 @@
+apply plugin: "eclipse"
+
+apply from: buildScriptsDir + "/build_java_lib.gradle"
+
+sourceSets {
+   main {
+      java {
+         exclude '**/Main.java'
+      }
+   }
+}
