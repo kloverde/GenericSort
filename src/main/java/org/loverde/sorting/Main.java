@@ -67,14 +67,21 @@ public class Main {
 
       dirOutput.mkdirs();
 
-      final BufferedWriter writer = new BufferedWriter( new FileWriter(DIR_OUTPUT + prefix + ".txt", false) );
+      BufferedWriter writer = null;
 
-      for( int i = 0; i < data.size(); i++ ) {
-         writer.write( data.get(i) );
-         writer.write( "\n" );
+      try {
+         writer = new BufferedWriter( new FileWriter(DIR_OUTPUT + prefix + ".txt", false) );
+
+         for( int i = 0; i < data.size(); i++ ) {
+            writer.write( data.get(i) );
+            writer.write( "\n" );
+            throw new IOException("");
+         }
+      } finally {
+         if( writer != null ) {
+            writer.close();
+         }
       }
-
-      writer.close();
 
       System.out.println( "\n" + prefix + "\n" + stats );
    }
