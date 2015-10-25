@@ -55,10 +55,11 @@ public class BubbleSort<T> implements SortingAlgorithm<T> {
 
       while( swapped ) {
          swapped = false;
-         iterations++;
 
          for( int i = 0; i < data.size() - 1; i++ ) {
             final int nextIdx = i + 1;
+
+            iterations++;
 
             if( nextIdx < data.size() ) {
                final T currElem = data.get( i );

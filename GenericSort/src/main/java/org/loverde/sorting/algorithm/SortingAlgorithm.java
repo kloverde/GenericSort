@@ -11,7 +11,7 @@ import java.util.List;
 import org.loverde.sorting.Statistics;
 
 
-public interface SortingAlgorithm <T> {
+public interface SortingAlgorithm<T> {
 
    /**
     * The {@code Comparator} is a user-supplied instruction to the sorting algorithm
