@@ -1,3 +1,5 @@
+// This Gradle script requires BuildScripts, located at https://github.com/kloverde/BuildScripts.
+
 apply plugin: "eclipse"
 
 apply from: buildScriptsDir + "/build_java_lib.gradle"
