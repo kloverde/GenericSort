@@ -53,7 +53,7 @@ public class Main {
 
    private void doSort( final SortingAlgorithm<Integer> algorithm, final String filename ) throws IOException {
       final String prefix;
-      final List<Integer> data = getUnorderedList( filename );
+      final List<Integer> data = loadFile( filename );
       final Statistics stats = algorithm.sortList( data );
       final File dirOutput = new File( DIR_OUTPUT );
       BufferedWriter writer = null;
@@ -84,7 +84,7 @@ public class Main {
       System.out.println( "\n" + prefix + "\n" + stats );
    }
 
-   private List<Integer> getUnorderedList( final String filename ) throws IOException {
+   private List<Integer> loadFile( final String filename ) throws IOException {
       final List<Integer> data = new ArrayList<Integer>();
       final BufferedReader br = new BufferedReader( new FileReader(filename) );
 
