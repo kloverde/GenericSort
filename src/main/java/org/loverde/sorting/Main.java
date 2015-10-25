@@ -74,7 +74,6 @@ public class Main {
          for( int i = 0; i < data.size(); i++ ) {
             writer.write( data.get(i) );
             writer.write( "\n" );
-            throw new IOException("");
          }
       } finally {
          if( writer != null ) {
