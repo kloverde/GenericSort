@@ -67,15 +67,14 @@ public class SelectionSort<T> implements SortingAlgorithm<T> {
           }
 
           if( minIdx != sortedStartIdx ) {
-             final T tJ = data.get( sortedStartIdx );
-             final T tMin = data.get( minIdx );
+             final T start = data.get( sortedStartIdx );
+             final T min = data.get( minIdx );
 
-             data.set( sortedStartIdx, tMin );
-             data.set( minIdx, tJ );
+             data.set( sortedStartIdx, min );
+             data.set( minIdx, start );
 
              swaps++;
           }
-      }
 
       stats.setEndDate( new Date() );
       stats.setIterationsPerformed( iterations );
