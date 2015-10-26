@@ -20,6 +20,9 @@ import org.loverde.sorting.algorithm.SelectionSort;
 import org.loverde.sorting.algorithm.SortingAlgorithm;
 
 
+/**
+ * This class is just for testing purposes.  It doesn't get added to the jar.
+ */
 public class Main {
    private static final Comparator<Integer> comparator;
 
@@ -91,9 +94,8 @@ public class Main {
       String s = br.readLine();
 
       while( s != null ) {
-         int i = Integer.parseInt( s );
+         data.add( new Integer(s) );
          s = br.readLine();
-         data.add( i );
       }
 
       br.close();
