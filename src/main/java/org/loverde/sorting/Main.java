@@ -75,7 +75,7 @@ public class Main {
          writer = new BufferedWriter( new FileWriter(DIR_OUTPUT + prefix + ".txt", false) );
 
          for( int i = 0; i < data.size(); i++ ) {
-            writer.write( data.get(i) );
+            writer.write( data.get(i).toString() );
             writer.write( "\n" );
          }
       } finally {
