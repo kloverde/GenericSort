@@ -47,7 +47,6 @@ public class BubbleSort<T> implements SortingAlgorithm<T> {
       stats = new Statistics();
       stats.setStartDate( new Date() );
       stats.setEndDate( stats.getStartDate() );
-      stats.setIterationsPerformed( 0 );
 
       if( data.size() < 2 ) {
          return stats;
