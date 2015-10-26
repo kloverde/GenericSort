@@ -62,7 +62,7 @@ public class SelectionSort<T> implements SortingAlgorithm<T> {
 
              if( comparator.compare(data.get(unsortedStartIdx), data.get(minIdx)) < 0 ) {
                   minIdx = unsortedStartIdx;
-              }
+             }
           }
 
           if( minIdx != sortedStartIdx ) {
